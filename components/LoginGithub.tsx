@@ -1,5 +1,6 @@
 "use client";
 
+import { signInWithGithub } from "@/actions/auth";
 import React, { useTransition } from "react";
 import { FaGithub } from "react-icons/fa";
 
@@ -8,7 +9,7 @@ const LoginGithub = () => {
 
   const handleGithubLogin = () => {
     startTransition(async () => {
-      // await signInWithGithub();
+      await signInWithGithub();
     });
   };
   return (
